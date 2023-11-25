@@ -27,24 +27,22 @@
   - Expected Response : "message : Task successfully created"
 
 - GET http://localhost:4000/api/tasks
- - Expected Response : [ tasks ]  
+  - Expected Response : [ tasks ]  
 
 - GET http://localhost:4000/api/task/:id
   - Expected Response : task  
 
 - POST http://localhost:4000/api/tasks/assign
- - Input Parameters : taskId, userId  
- - Expected Response :  "message: Task successfully assigned to User"
+  - Input Parameters : taskId, userId  
+  - Expected Response :  "message: Task successfully assigned to User"
 
 
 - POST http://localhost:4000/api/tasks/status
   - Input Parameters : taskId,  status  
   - Expected Response : "message: Task status successfully updated"
 
-
 - GET http://localhost:4000/api/tasks/stats
   - Expected Response : completedTasks, pendingTasks  
-
 
 - DELETE http://localhost:4000/api/task/:id
   - Expected Response : "message: Task successfully deleted"
