@@ -14,8 +14,10 @@
 ## API endpoints
 - POST http://localhost:4000/api/users
   Input Parameters
+  
   {name ,email , password}
   Expected Response
+  
   {"message": "user successfully created"}
 
 
