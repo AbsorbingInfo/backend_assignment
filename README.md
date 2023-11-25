@@ -13,25 +13,21 @@
 
 ## API endpoints
 - POST http://localhost:4000/api/users
-  - Input Parameters : name ,email, password
+  - Input Parameters : name, email, password
   - Expected Response : "message: user successfully created"
 
 - POST http://localhost:4000/api/users/login
-  - Input Parameters
-  { email, password }
-  - Expected Response
-  { message, token }
+  - Input Parameters : email, password 
+  - Expected Response : message, token
 
 - POST http://localhost:4000/api/task
-  - Input Parameters
-  header = Authorization
-  body = { title, description ,dueDate ,status}
-  - Expected Response
-  {"message": "Task successfully created"}
+  - Input Parameters  
+  header : Authorization  
+  body : { title, description ,dueDate ,status}  
+  - Expected Response : "message : Task successfully created"
 
-- GET http://localhost:4000/api/tasks  
-res 
-array of all tasks
+- GET http://localhost:4000/api/tasks
+ - Expected Response : [ tasks ]
 
 GET http://localhost:4000/api/task/:id
 single task
