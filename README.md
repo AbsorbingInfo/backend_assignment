@@ -17,59 +17,36 @@
   - Expected Response : "message: user successfully created"
 
 - POST http://localhost:4000/api/users/login
-  - Input Parameters : email, password 
+  - Input Parameters : email, password  
   - Expected Response : message, token
 
 - POST http://localhost:4000/api/task
   - Input Parameters  
-  header : Authorization  
-  body : { title, description ,dueDate ,status}  
+  header : Authorization    
+  body :  title, description, dueDate, status  
   - Expected Response : "message : Task successfully created"
 
 - GET http://localhost:4000/api/tasks
- - Expected Response : [ tasks ]
+ - Expected Response : [ tasks ]  
 
-GET http://localhost:4000/api/task/:id
-single task
+- GET http://localhost:4000/api/task/:id
+  - Expected Response : task  
 
-POST http://localhost:4000/api/tasks/assign
-{
-      "taskId": "65622543fb780de58bb1bf87",
-      "userId": "65622311c02afe7813a88745"
-}
-{
-    "message": "Task successfully assigned to User"
-}
+- POST http://localhost:4000/api/tasks/assign
+ - Input Parameters : taskId, userId  
+ - Expected Response :  "message: Task successfully assigned to User"
 
 
-POST http://localhost:4000/api/tasks/status
-
-{
-      "taskId": "65622543fb780de58bb1bf87",
-      "status": "completed"
-}
-
-{
-    "message": "Task status successfully updated"
-}
+- POST http://localhost:4000/api/tasks/status
+  - Input Parameters : taskId,  status  
+  - Expected Response : "message: Task status successfully updated"
 
 
-GET http://localhost:4000/api/tasks/stats
-{
-    "completedTasks": 1,
-    "pendingTasks": 0
-}
-
-DELETE http://localhost:4000/api/task/:id
-
-{
-    "message": "Task successfully deleted"
-}
+- GET http://localhost:4000/api/tasks/stats
+  - Expected Response : completedTasks, pendingTasks  
 
 
-
-
-
-
+- DELETE http://localhost:4000/api/task/:id
+  - Expected Response : "message: Task successfully deleted"
 
 
